@@ -3,7 +3,7 @@ import PocketBase from 'pocketbase';
 // Create PocketBase instance only on client side
 const getPocketBase = () => {
   if (typeof window === "undefined") return null;
-  return new PocketBase('https://icasem.pockethost.io');
+  return new PocketBase('https://wcler.pockethost.io');
 };
 
 export const pb = getPocketBase();
@@ -27,7 +27,7 @@ export const speakersService = {
     async getAll() {
       try {
         if (!pb) throw new Error('PocketBase not initialized');
-        const records = await pb.collection('speakers').getFullList({
+        const records = await pb.collection('icgewee_speakers').getFullList({
           sort: '-created',
         });
   

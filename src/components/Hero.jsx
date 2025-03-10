@@ -128,10 +128,10 @@ export default function HeroSection() {
 
             {/* Main title */}
             <motion.div variants={titleVariants} initial="hidden" animate="visible" className="pt-4">
-              <h1 className="text-6xl font-bold leading-tight text-white md:text-7xl lg:text-8xl xl:text-9xl">
-                ZEP
-                <br />
-                RESEARCH
+              <h1 className="text-4xl font-bold leading-tight text-white md:text-4xl lg:text-4xl xl:text-5xl overflow-visible  z-10 uppercase drop-shadow-2xl">
+              International Conference <br /> on <span className="bg-[#c5ff00] bg-clip-text text-transparent">Gender Equality, 
+               
+                Women Empowerment </span>& <span className="bg-gradient-to-t   from-violet-400 to-purple-300 bg-clip-text text-transparent">entrepreneurship</span>
               </h1>
             </motion.div>
           </div>
@@ -144,13 +144,13 @@ export default function HeroSection() {
             className="relative mt-8 h-64 overflow-hidden rounded-xl md:mt-0 md:h-80 lg:h-96"
             >
             <div className="absolute bottom-4 right-4 z-10 rounded border-2 border-yellow-300 bg-transparent p-1">
-              <span className="block px-2 py-1 text-xs font-bold text-yellow-300">DATS TEAM</span>
+              <span className="block px-2 py-1 text-xs font-bold text-yellow-300">ICGEWEE</span>
             </div>
             <Image
-              src="https://images.unsplash.com/photo-1560523159-6b681a1e1852?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Conference audience"
               fill
-              className="object-cover"
+              className="object-cover opacity-50"
               />
           </motion.div>
         </div>

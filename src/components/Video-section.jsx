@@ -46,13 +46,13 @@ export default function VideoSection() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-4xl font-bold tracking-tighter text-white md:text-5xl lg:text-6xl"
           >
-            ONE MAC
+            ZEP RESEARCH
           </motion.h1>
           <motion.h2 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-5xl font-extrabold tracking-tighter text-[#c5ff00] md:text-6xl lg:text-7xl"
+            className="text-5xl font-extrabold tracking-tighter text-[#c5ff00] md:text-6xl lg:text-6xl"
           >
             ENDLESS<br />OPPORTUNITIES
           </motion.h2>

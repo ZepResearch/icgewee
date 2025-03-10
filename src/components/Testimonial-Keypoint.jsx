@@ -5,16 +5,16 @@ import Image from "next/image"
 
 export default function TestimonialKeypoints() {
   const keypoints = [
-    { name: "IGAMING", color: "text-white" },
-    { name: "MARKETING", color: "text-[#c5ff00]" },
-    { name: "EARNING ON APPS", color: "text-white" },
-    { name: "ADTECH", color: "text-white" },
-    { name: "AFFILIATE MARKETING", color: "text-white" },
-    { name: "FACEBOOK", color: "text-white" },
-    { name: "CRYPTO", color: "text-white" },
-    { name: "FINANCE", color: "text-[#c5ff00]", hasIcon: true },
-    { name: "ENTREPRENEURSHIP", color: "text-[#c5ff00]" },
-    { name: "MARKETPLACES", color: "text-white" },
+    { name: "Women Leadership", color: "text-white" },
+    { name: "Gender Equality", color: "text-[#c5ff00]" },
+    { name: "Women in Business", color: "text-white" },
+    { name: "Social Impact", color: "text-white" },
+    { name: "Inclusive Innovation", color: "text-white" },
+    { name: "Founders", color: "text-white" },
+    { name: "Economic Empowerment", color: "text-white" },
+    { name: " Policy & Advocacy", color: "text-[#c5ff00]", hasIcon: true },
+    { name: "Financial Independence", color: "text-[#c5ff00]" },
+    { name: "Entrepreneurship", color: "text-white" },
     { name: "P2P", color: "text-white" },
   ]
 
@@ -59,15 +59,15 @@ export default function TestimonialKeypoints() {
                 />
               </div>
             </div>
-
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              MAC IS FOR THOSE WHO WANT TO KNOW <span className="text-[#c5ff00]">HOW TO MAKE MONEY</span>{" "}
-              <span className="text-[#a095ff]">AND LEADS ON TRAFFIC</span>
+            THIS CONFERENCE IS FOR THOSE WHO WANT <span className="text-[#c5ff00]"> TO DRIVE CHANGE IN GENDER EQUALITY</span>{" "}
+              <span className="text-[#a095ff]">AND WOMEN’S EMPOWERMENT THROUGH ENTREPRENEURSHIP.
+              </span>
             </h2>
           </motion.div>
 
           {/* Right side - Key Points */}
-          <motion.div className="lg:w-7/12 mt-20" variants={container} initial="hidden" animate="show">
+          <motion.div className="lg:w-7/12 mt-24" variants={container} initial="hidden" animate="show">
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               {keypoints.map((point, index) => (
                 <motion.div key={index} variants={item} className="relative">

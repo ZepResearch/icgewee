@@ -35,19 +35,19 @@ export default function GlobeSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-4"
-          >
+          >    
             <h2 className="text-3xl font-bold leading-tight text-purple-300 md:text-4xl lg:text-5xl">
-              ATTENDING THE CONFERENCE IS NOT ONLY AN <span className="text-purple-300">INTRODUCTION</span>{" "}
+            ATTENDING THIS CONFERENCE OFFERS INSIGHTS <span className="text-purple-300">INTO LEADING ORGANIZATIONS</span>{" "}
               <span className="text-gray-400">
-                TO KEY COMPANIES IN THE MARKET{" "}
+              {" "}
                 <span role="img" aria-label="microphone">
                   🎤
                 </span>
-                , BUT ALSO UP-TO-DATE KNOWLEDGE OF TRENDS{" "}
+                , EMERGING TRENDS{" "}
                 <span role="img" aria-label="sparkles">
                   ✨
                 </span>{" "}
-                AND APPROACHES THAT WORK.
+                AND IMPACTFUL STRATEGIES IN GENDER EQUALITY , WOMEN EMPOWERMENT & ENTREPRENEURSHIP.
               </span>
             </h2>
           </motion.div>

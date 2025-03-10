@@ -7,23 +7,24 @@ import { Plus } from "lucide-react"
 
 const highlights = [
   {
-    title: "UP-TO-DATE KNOWLEDGES",
-    description:
-      "Extraordinary set of reports presented by key market players, fresh faces on stage, and, of course, new approaches to affiliate marketing – this is why you've been attending MAC for years.",
-    imageSrc: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "INSIGHTFUL DISCUSSIONS",
+    description: 
+      "Engaging sessions led by experts, policymakers, and change-makers sharing impactful strategies and innovative solutions for gender equality and women empowerment.",
+    imageSrc: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    title: "EXHIBITION MARKET",
-    description:
-      "Connect with industry leaders and innovative companies showcasing the latest products and services. Network with professionals and discover new opportunities for collaboration.",
-    imageSrc: "https://images.unsplash.com/photo-1582192730841-2a682d7375f9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "EXHIBITION SHOWCASE",
+    description: 
+      "Explore groundbreaking initiatives, women-led startups, and organizations dedicated to fostering inclusion, innovation, and economic empowerment.",
+    imageSrc: "http://images.unsplash.com/photo-1632383380175-812d44ec112b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    title: "PARTIES AND MEETUPS",
-    description:
-      "Experience unforgettable networking events, exclusive parties, and casual meetups that foster meaningful connections in a relaxed atmosphere.",
-    imageSrc: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+    title: "NETWORKING & CONNECTIONS",
+    description: 
+      "Build lasting relationships with entrepreneurs, activists, investors, and leaders through networking sessions, mentorship programs, and exclusive meetups.",
+    imageSrc: "https://images.unsplash.com/photo-1560439514-4e9645039924?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+  
 ]
 
 export default function ConferenceHighlights() {

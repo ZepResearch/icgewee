@@ -46,7 +46,7 @@ const Navbar = () => {
             transition={{ delay: 0.3 }}
             className="hidden md:flex items-center border border-white/20 rounded-lg px-3 py-1"
           >
-            <span className="text-white text-sm font-bold">CONF LOGO</span>
+            <span className="text-white text-sm font-bold">ICGEWEE</span>
           </motion.div>
           
           {/* Chat bubble icon */}

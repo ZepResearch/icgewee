@@ -40,16 +40,16 @@ export default function FeatureSection() {
 
   // Categories with their highlight status
   const topRow = [
-    { name: "AFFILIATES", highlighted: true },
-    { name: "WEBMASTERS", highlighted: false },
-    { name: "MEDIABUYING TEAMS", highlighted: false },
-    { name: "AFFILIATE NETWORKS", highlighted: false },
+    { name: "Women Entrepreneurs", highlighted: true },
+    { name: "Gender Equality Advocates", highlighted: false },
+    { name: "Corporate Leaders", highlighted: false },
+    { name: "Investors & Mentors", highlighted: false },
   ]
 
   const bottomRow = [
-    { name: "DIRECT ADVERTISERS", highlighted: false },
-    { name: "CRYPTO ENTHUSIASTS", highlighted: false },
-    { name: "INFO-BUSINESSMEN", highlighted: true },
+    { name: "Policymakers ", highlighted: false },
+    { name: "Academicians & Researchers", highlighted: false },
+    { name: "Social Impact Leaders", highlighted: true },
   ]
 
   return (
@@ -64,7 +64,7 @@ export default function FeatureSection() {
         >
           {/* Title */}
           <motion.h1 className="text-6xl md:text-8xl font-bold mb-16 tracking-wider" variants={titleVariants}>
-            Conferece Name 2025
+           ICGEWEE 2025
           </motion.h1>
 
           <div className="w-full   flex flex-col justify-start items-start">

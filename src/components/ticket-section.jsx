@@ -31,48 +31,54 @@ export default function TicketSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-2">
           <TicketCard
-            title="GOLD"
+            title="Presenter - virtual"
             icon={<Plus className="h-5 w-5 text-yellow-400" />}
             price={99}
-            originalPrice={249}
-            features={["2 days access", "Exhibition", "All speeches", "Access to video materials"]}
+            originalPrice={219}
+            features={['Full conference access',
+             ' Networking sessions',
+              'Workshop materials',
+           '   Online Q&A sessions',
+            '  Digital certificate of attendance']}
           />
 
           <TicketCard
-            title="VIP"
+            title="Presenter - physical"
             icon={<Star className="h-5 w-5 text-orange-400" />}
             price={279}
-            originalPrice={599}
-            features={["All from Gold", "Afterparty attendance", "Free appetizers, drinks, hookah at the Party"]}
+            originalPrice={319}
+            features={['All Virtual Presenter benefits',
+              'VIP networking dinner',
+            '  Priority seating',
+             ' Exclusive roundtable sessions',
+              '1-year membership access']}
           />
 
           <TicketCard
-            title="DIAMOND"
+            title="Listener - physical"
             icon={<Diamond className="h-5 w-5 text-blue-300" />}
-            price={699}
+            price={99}
             originalPrice={1599}
-            features={[
-              "All from VIP",
-              "Private Conference zone with all day food & drinks",
-              "Afterparty attendance",
-              "Private Afterparty zone with appetizers, drinks, hookah at the Party",
-            ]}
+            features={['Full conference access',
+              '  Online networking sessions',
+               ' Digital workshop materials',
+                'Access to recorded sessions',
+               ' Digital certificate of attendance']
+            }
             
           />
 
           <TicketCard
-            title="COMPANY PASS"
+            title="Listener - physical"
             icon={<Crown className="h-5 w-5 text-yellow-500" />}
-            price={359}
+            price={199}
             originalPrice={649}
             features={[
-              "2 days access",
-              "Exhibition",
-              "Afterparty attendance",
-              "Free appetizers, drinks, hookah at the Party",
-              "Company's logo at the conference website",
-              "Company's logo at the conference press wall",
-              "Access to video materials",
+            '  All Virtual Listener benefits',
+'In-person networking opportunities',
+'Physical workshop materials',
+'Lunch and refreshments',
+'Guided tour of conference venue'
             ]}
           />
         </div>
