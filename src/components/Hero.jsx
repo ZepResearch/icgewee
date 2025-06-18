@@ -1,162 +1,133 @@
-"use client"
-
-import { motion } from "framer-motion"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, ArrowUpRight, Calendar1, ChevronDown, MapPin } from "lucide-react"
+import { ReserveForm } from "./reserve-form"
+import { ReserveButton } from "./reserve-button"
+// import { ReserveButton } from "./reserve-button"
 
-export default function HeroSection() {
-  // Animation variants
-  const titleVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  }
+export default function Hero() {
+  return (
+    <div className="flex flex-col min-h-full bg-gradient-to-b from-gray-50 to-white ">
+  
+      <main className="flex-1">
+        <section className="w-full pt-8 md:pt-12  max-w-screen-2xl mx-auto" >
+          <div className="container px-4 md:px-6 grid lg:grid-cols-2 gap-1 items-center mx-auto">
+            <div className="space-y-6">
+              <h1 className="text-4xl font-semibold text-pretty tracking-tight sm:text-5xl md:text-6xl  leading-15">
+              {/* International Conference on  */}
 
-  const fadeInVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  }
-
-  const staggerContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  }
-
-  const avatarVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
-      },
-    },
-  }
-
-  // Sample avatar data
-  const avatars = [
-    { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", fallback: "S1" },
-    { src: "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", fallback: "S2" },
-    { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", fallback: "S3" },
-    { src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ", fallback: "S4" },
-   
-  ]
-
-  return (<>
-    <div className="relative min-h-full overflow-hidden pt-24 ">
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="absolute -left-6 top-1/2 h-56 w-56 -translate-x-1/2 transform bg-yellow-300 b"
-        style={{ clipPath: "polygon(0 0, 100% 50%, 0 100%)" }}
-        />
-      {/* Yellow accent triangle */}
-
-      <div className="container relative mx-auto px-4 py-12  max-w-7xl ">
-        {/* Date and venue */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="absolute right-4 top-4 text-right md:right-12 md:top-12"
-          >
-          <h2 className="text-xl font-bold text-yellow-300 md:text-3xl lg:text-7xl">20-21 MAY</h2>
-          <h3 className="text-lg font-medium text-purple-300 md:text-2xl lg:text-4xl">MERIDIAN EXPO</h3>
-        </motion.div>
-
-        <div className="mt-24 grid gap-8 md:grid-cols-2 md:gap-12 lg:mt-32">
-          <div className="space-y-8">
-            {/* Avatars */}
-            <motion.div
-              variants={staggerContainerVariants}
-              initial="hidden"
-              animate="visible"
-              className="flex -space-x-4"
-              >
-              {avatars.map((avatar, index) => (
-                <motion.div key={index} variants={avatarVariants}>
-                  <Avatar className="h-12 w-12 border-2 border-purple-800 md:h-16 md:w-16">
-                    <AvatarImage src={avatar.src} alt={`Speaker ${index + 1}`} className={"object-contain bg-amber-50"} />
-                    <AvatarFallback className="bg-yellow-300 text-purple-900">{avatar.fallback}</AvatarFallback>
-                  </Avatar>
-                </motion.div>
-              ))}
-              <motion.div variants={fadeInVariants} initial="hidden" animate="visible" className="space-y-4 ml-8">
-              <h2 className="text-xl font-medium text-white md:text-2xl">Europe&apos;s Biggest Tech Conference</h2>
-              <div className="flex flex-wrap gap-3">
-                <Badge
-                  variant="outline"
-                  className="rounded-full border-yellow-300 bg-transparent px-4 py-1 text-yellow-300"
-                  >
-                  <span className="mr-2 h-2 w-2 rounded-full bg-yellow-300"></span>
-                  TOP Speakers
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className="rounded-full border-yellow-300 bg-transparent px-4 py-1 text-yellow-300"
-                  >
-                  <span className="mr-2 h-2 w-2 rounded-full bg-yellow-300"></span>
-                  50+ Countries
-                </Badge>
-              </div>
-            </motion.div>
-            </motion.div>
-
-            {/* Tagline and badges */}
-            
-
-            {/* Main title */}
-            <motion.div variants={titleVariants} initial="hidden" animate="visible" className="pt-4">
-              <h1 className="text-4xl font-bold leading-tight text-white md:text-4xl lg:text-4xl xl:text-5xl overflow-visible  z-10 uppercase drop-shadow-2xl">
-              International Conference <br /> on <span className="bg-[#c5ff00] bg-clip-text text-transparent">Gender Equality, 
-               
-                Women Empowerment </span>& <span className="bg-gradient-to-t   from-violet-400 to-purple-300 bg-clip-text text-transparent">entrepreneurship</span>
+                International Conference on <span className=" bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 drop-shadow-2xl text-transparent bg-clip-text  ">Gender Equality, Women Empowerment </span>& Entrepreneurship
               </h1>
-            </motion.div>
-          </div>
-
-          {/* Conference image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="relative mt-8 h-64 overflow-hidden rounded-xl md:mt-0 md:h-80 lg:h-96"
-            >
-            <div className="absolute bottom-4 right-4 z-10 rounded border-2 border-yellow-300 bg-transparent p-1">
-              <span className="block px-2 py-1 text-xs font-bold text-yellow-300">ICGEWEE</span>
-            </div>
-            <Image
-              src="https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Conference audience"
-              fill
-              className="object-cover opacity-50"
+              <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Join us to explore the cutting-edge advancements and interdisciplinary connections shaping the future of
+                research across diverse fields.
+              </p>
+              
+            <div className="flex sm:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-4xl backdrop-blur-sm bg-gray-50/30 py-4 rounded-3xl ">
+              <img
+                src="/assets/scopus.png"
+                alt=""
+                className="h-12 drop-shadow-lg"
               />
-          </motion.div>
-        </div>
-      </div>
+              <img
+                src="/assets/clarivate.png"
+                alt=""
+                className="h-12 drop-shadow-lg"
+              />
+              <img
+                src="assets/zepresearch.png"
+                alt=""
+                className="h-12 drop-shadow-lg"
+              />
+            </div>
+              <div className="gap-3 flex  sm:flex-row flex-col mb-0 ">
+            <Link href={'/registration'}>
+              <Button  className="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-lg text-lg ">
+                Register Now
+              </Button>
+            </Link>
+             {/* <Link href={'/committee'}>
+              <Button  className="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-lg text-lg ">
+               Committee
+              </Button>
+            </Link> */}
+            <Link href={'/about-conference'}>
+            <Button className="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-lg text-lg ">
+               Submit Paper
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <ReserveButton/>
+          
+             {/* <ReserveButton/> */}
+            </div>
+           
+            </div>
+            <div className="relative flex justify-center items-center lg:justify-end">
+              <Image
+                src="/assets/hero2.png"
+                width={500}
+                height={500}
+                alt="Brain network representing multidisciplinary research"
+                className="mx-auto  overflow-hidden rounded-xl object-cover object-bottom  lg:order-last select-none pointer-events-none  drop-shadow-2xl"
+              />
+              {/* <Button
+                variant="outline"
+                size="icon"
+                className="absolute bottom-4 right-4 w-12 h-12 rounded-full shadow-lg bg-white/80 backdrop-blur-sm"
+              >
+                <ChevronDown className="w-6 h-6" />
+                <span className="sr-only">Scroll down</span>
+              </Button> */}
+            </div>
+          </div>
+        </section>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt- max-w-screen-2xl mx-auto relative z-10">
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                  <h3 className="text-lg font-semibold mb-2">October | 10<sup>th</sup> - 11<sup>th</sup> 2025</h3>
+                  <p className="text-sm text-gray-500">
+                    Explore cutting-edge topics across various disciplines, fostering interdisciplinary collaboration.
+                  </p>
+                  <Link
+                    href="/schedule"
+                    className="mt-4 inline-flex items-center text-sm font-medium text-gray-900 hover:underline"
+                    prefetch={false}
+                  >
+                    <Calendar1 className="w-4 h-4 mr-1" />
+                    view full schedule
+                  </Link>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                  <h3 className="text-lg font-semibold mb-2">Bali, Indonesia </h3>
+                  <p className="text-sm text-gray-500">
+                    Gain insights from leading researchers and innovators in their respective fields.
+                  </p>
+                  <Link
+                    href="#"
+                    className="mt-4 inline-flex items-center text-sm font-medium text-gray-900 hover:underline"
+                    prefetch={false}
+                  >
+                    <MapPin className="w-4 h-4 mr-1" />
+                    Detail Venue
+                  </Link>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                  <h3 className="text-lg font-semibold mb-2">Networking Opportunities</h3>
+                  <p className="text-sm text-gray-500">
+                    Connect with peers, mentors, and potential collaborators from around the globe.
+                  </p>
+                  <Link
+                    href="/registration"
+                    className="mt-4 inline-flex items-center text-sm font-medium text-gray-900 hover:underline"
+                    prefetch={false}
+                  >
+                    Register now
+                    <ArrowUpRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              </div>
+      </main>
     </div>
-              </>
   )
 }
-

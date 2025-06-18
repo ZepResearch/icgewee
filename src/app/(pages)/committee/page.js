@@ -1,6 +1,4 @@
 import React from 'react'
-import IACommitte from './components/IACommitte'
-import ScientificCommittee from './components/ScientificCommittee'
 import OrganizingCommittee from './components/OrganizingCommittee'
 export const metadata = {
   title: 'Committee ICASEM 2025 | International Conference on Applied Science, Engineering & Management',
@@ -36,7 +34,7 @@ function page() {
       <OrganizingCommittee/>
         {/* 
         <ScientificCommittee/>   */}
-        <IACommitte/>
+       
     </div>
   )
 }
