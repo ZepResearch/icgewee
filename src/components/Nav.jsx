@@ -48,11 +48,8 @@ function Nav() {
       <header className="flex items-center justify-between px-6 py-4 lg:px-12">
           <Link href={"/"}>
           <div className="flex items-center space-x-2 select-none pointer-events-none">
-          <div className="w-15 h-15 bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 border shadow-2xs   rounded-lg flex items-center justify-center">
-            <Image src={"/logowhite.svg"} alt='logo' height={500} width={500} className="w-15 h-15 text-white object-contain pointer-events-none " />
+            <Image src={"/logo.svg"} alt='logo' height={200} width={200} className=" text-white object-contain pointer-events-none " />
             {/* <Equal className="w-6 h-6 text-white" /> */}
-          </div>
-          <span className="text-4xl font-semibold text-neutral-950 inline-flex tracking-widest  items-center ">ICG<span><Scale className="h-9 w-9 mx-0 pointer-events-none select-none"/></span>WEE </span>
         </div>
           </Link>
 
@@ -104,12 +101,10 @@ function Nav() {
             </SheetTrigger>
             <SheetContent side="right" className="w-64 p-0">
               <div className="flex flex-col h-full">
-                <div className="flex items-center space-x-2 px-6 py-4 border-b">
-                  <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
-                    <Activity className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-lg font-semibold text-gray-900">Emerging Trends <span className='text-orange-500'>Conf.</span></span>
-                </div>
+              <div className="flex items-center space-x-2 select-none pointer-events-none">
+            <Image src={"/logo.svg"} alt='logo' height={200} width={200} className=" p-3 text-white object-contain pointer-events-none " />
+            {/* <Equal className="w-6 h-6 text-white" /> */}
+        </div>
                 <nav className="flex flex-col gap-1 px-6 py-4">
                   {navLinks.map((link) =>
                     link.dropdown ? (

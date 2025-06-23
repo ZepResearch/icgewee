@@ -170,11 +170,8 @@ export default function ConferenceFooter() {
             <div className="flex items-center space-x-3 mb-6">
             <Link href={"/"}>
             <div className="flex items-center space-x-2">
-          <div className="w-15 h-15 bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 border shadow-2xs   rounded-lg flex items-center justify-center">
-            <Image src={"/logo.png"} alt='logo' height={500} width={500} className="w-15 h-15 text-white object-contain" />
+            <Image src={"/whitelogo.svg"} alt='logo' height={300} width={300} className="w text-white object-contain" />
             {/* <Equal className="w-6 h-6 text-white" /> */}
-          </div>
-          <span className="text-4xl font-semibold text-neutral-50 inline-flex tracking-widest  items-center ">ICG<span><Scale className="h-9 w-9 mx-0"/></span>WEE </span>
         </div>
           </Link>
             </div>
