@@ -9,71 +9,59 @@ export default function ThemeAndTopicsPage() {
   const researchAreas = [
     {
       icon: <Users className="h-8 w-8 text-white" />,
-      title: "Gender Equality & Social Justice",
+      title: "Gender Equality and Social Justice",
       topics: [
-        "Gender Pay Gap and Economic Inequality",
-        "Political Participation and Leadership",
-        "Gender-Based Violence Prevention",
-        "Legal Frameworks and Policy Reform",
-        "Intersectionality and Inclusive Practices",
-      ],
-    },
-    {
-      icon: <Heart className="h-8 w-8 text-white" />,
-      title: "Women's Health & Wellbeing",
-      topics: [
-        "Reproductive Rights and Healthcare Access",
-        "Mental Health and Gender-Specific Issues",
-        "Maternal Health and Family Planning",
-        "Work-Life Balance and Wellness",
-        "Healthcare Equity and Innovation",
+        "Gender mainstreaming in policy and practice",
+        "Legal reforms and rights-based approaches",
+        "Intersectionality: gender, race, class, and disability",
+        "Gender equity in education and training",
+        "Bridging the digital gender divide",
+        "Vocational and leadership training for women",
       ],
     },
     {
       icon: <Briefcase className="h-8 w-8 text-white" />,
-      title: "Women in Business & Leadership",
+      title: "Women Empowerment & Entrepreneurship",
       topics: [
-        "Female Entrepreneurship Ecosystem",
-        "Corporate Leadership and Board Diversity",
-        "Access to Capital and Investment",
-        "Mentorship and Networking Programs",
-        "Breaking Glass Ceilings",
+        "Empowering women in political and public life",
+        "Women in science, technology, engineering, and mathematics (STEM)",
+        "Grassroots women leadership and community impact",
+        "Innovations by women entrepreneurs",
+        "Access to finance and venture capital",
+        "Women-led startups and digital entrepreneurship",
+        "Young Women Entrepreneurs Forum",
+        "Voices from the Margins: Indigenous and Rural Women",
+        "Men as Allies: Engaging Boys and Men for Equality",
       ],
     },
     {
-      icon: <BookOpen className="h-8 w-8 text-white" />,
-      title: "Education & Skill Development",
+      icon: <Heart className="h-8 w-8 text-white" />,
+      title: "Health, Safety & Well-being",
       topics: [
-        "STEM Education for Girls and Women",
-        "Digital Literacy and Technology Access",
-        "Vocational Training and Capacity Building",
-        "Educational Policy and Gender Bias",
-        "Lifelong Learning Opportunities",
-      ],
-    },
-    {
-      icon: <Globe className="h-8 w-8 text-white" />,
-      title: "Global Perspectives & Culture",
-      topics: [
-        "Cultural Barriers and Social Norms",
-        "International Women's Rights",
-        "Rural Women Empowerment",
-        "Migration and Gender Issues",
-        "Indigenous Women's Rights",
+        "Women's health and reproductive rights",
+        "Gender-based violence prevention",
+        "Mental health support for women in workspaces",
+        "Women in sustainable development",
+        "Gendered impacts of climate change",
+        "Eco-entrepreneurship and green innovation",
+        "Gender-responsive corporate governance",
+        "ESG, CSR, and gender inclusion policies",
+        "Global case studies of successful initiatives",
       ],
     },
     {
       icon: <Shield className="h-8 w-8 text-white" />,
-      title: "Technology & Innovation",
+      title: "Technology, Innovation & Digital Empowerment",
       topics: [
-        "Women in Technology and Innovation",
-        "Digital Platforms for Empowerment",
-        "Fintech and Financial Inclusion",
-        "AI Ethics and Gender Bias",
-        "Social Impact Technologies",
+        "Women in AI, blockchain, and emerging technology",
+        "Digital literacy programs for rural and urban women",
+        "Social media and women's voices",
+        "Role of NGOs and international bodies",
+        "Public-private partnerships for gender equity",
+        "Cross-border collaborations for impact",
       ],
     },
-  ]
+  ];
 
   const submissionSteps = [
     {
@@ -149,7 +137,7 @@ export default function ThemeAndTopicsPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-8">Research Focus Areas</h2>
+            <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-8">Session & Tracks </h2>
             <p className="text-gray-600 text-lg">Explore the diverse topics and themes that will shape our discussions</p>
           </div>
 
