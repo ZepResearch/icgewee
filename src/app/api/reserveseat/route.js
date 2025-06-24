@@ -4,7 +4,7 @@ import { userConfirmationTemplate } from "@/emails/user-confirmation-template"
 import { adminNotificationTemplate } from "@/emails/admin-notification-template"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
-const adminEmail = process.env.ADMIN_EMAIL || "info@icegewee.com"
+const adminEmail = process.env.ADMIN_EMAIL || "info@icgewee.com"
 
 export async function POST(request) {
   try {
@@ -18,7 +18,7 @@ export async function POST(request) {
 
     // Send confirmation email to user
     await resend.emails.send({
-      from: "ICGEWEE | <noreply@icegewee.com>",
+      from: "ICGEWEE | <noreply@icgewee.com>",
       to: email,
       subject: "ICGEWEE | Registration Confirmation",
       html: userConfirmationTemplate(data),
@@ -26,8 +26,8 @@ export async function POST(request) {
 
     // Send notification email to admin
     await resend.emails.send({
-      from: "ICGEWEE | Registration <noreply@icegewee.com>",
-      to: "info@icegewee.com",
+      from: "ICGEWEE | Registration <noreply@icgewee.com>",
+      to: "info@icgewee.com",
       subject: "New ICGEWEE Registration",
       html: adminNotificationTemplate(data),
     })

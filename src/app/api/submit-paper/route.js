@@ -59,18 +59,18 @@ export async function POST(request) {
 
     // Send confirmation email to user
     await resend.emails.send({
-      from: "Conference <info@icegewee.com>",
+      from: "Conference <info@icgewee.com>",
       to: data.email,
       subject:
-        "Paper Submission Confirmation - icegewee 2025",
+        "Paper Submission Confirmation - icgewee 2025",
       html: getUserEmailTemplate(data),
     })
 
     // Send notification email to admin
     await resend.emails.send({
-      from: "Conference <info@icegewee.com>",
-      to: "info@icegewee.com", // Replace with actual admin email
-      subject: "New Paper Submission - icegewee 2025",
+      from: "Conference <info@icgewee.com>",
+      to: "info@icgewee.com", // Replace with actual admin email
+      subject: "New Paper Submission - icgewee 2025",
       html: getAdminEmailTemplate(data, fileUrl),
     })
 

@@ -35,7 +35,7 @@ export default function SubmissionSuccess() {
            
             </h1>
             <p className="text-xl text-gray-700 mb-8">
-              Thank you for contributing to the International Conference on Emerging Trends in Multidisciplinary Research
+              Thank you for contributing to the International Conference on Gender Equality, Women Empowerment & Entrepreneurship
             </p>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function SubmissionSuccess() {
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-pink-400/10 via-red-400/10 to-yellow-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
               <div className="relative p-8 md:p-12 text-center">
-                <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-orange-400 p-0.5 mb-6">
+                <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-lime-400 p-0.5 mb-6">
                   <div className="flex h-full w-full items-center justify-center rounded-full bg-white">
                     <CheckCircle className="h-10 w-10 text-green-600" />
                   </div>
@@ -61,8 +61,7 @@ export default function SubmissionSuccess() {
 
                 <div className="space-y-6 text-gray-700 max-w-2xl mx-auto">
                   <p>
-                    Thank you for submitting your paper to the International conference on
-                    AI & Robotics Innovation. Your contribution is an important part of advancing research
+                    Thank you for submitting your paper to the International Conference on Gender Equality, Women Empowerment & Entrepreneurship Your contribution is an important part of advancing research
                     and collaboration across diverse academic disciplines.
                   </p>
 
@@ -70,7 +69,7 @@ export default function SubmissionSuccess() {
                     <h3 className="text-xl font-medium text-gray-900 mb-4">What Happens Next?</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
-                        <div className="h-6 w-6 rounded-full bg-orange-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="h-6 w-6 rounded-full bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 flex items-center justify-center shrink-0 mt-0.5">
                           <span className="text-xs font-bold text-white">1</span>
                         </div>
                         <span>
@@ -79,7 +78,7 @@ export default function SubmissionSuccess() {
                         </span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="h-6 w-6 rounded-full bg-orange-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="h-6 w-6 rounded-full bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 flex items-center justify-center shrink-0 mt-0.5">
                           <span className="text-xs font-bold text-white">2</span>
                         </div>
                         <span>
@@ -87,7 +86,7 @@ export default function SubmissionSuccess() {
                         </span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="h-6 w-6 rounded-full bg-orange-400 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="h-6 w-6 rounded-full bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 flex items-center justify-center shrink-0 mt-0.5">
                           <span className="text-xs font-bold text-white">3</span>
                         </div>
                         <span>
@@ -100,12 +99,12 @@ export default function SubmissionSuccess() {
 
                   <div className="flex items-center justify-center gap-4 mt-8">
                     <Calendar className="h-5 w-5 text-neutral-800" />
-                    <span>Mark your calendar: Conference takes place on November 14th - 15th| 2025 in Singapore</span>
+                    <span>Mark your calendar: Conference takes place on October | 10th - 11th 2025 in Bali, Indonesia</span>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-                  <Button asChild className="bg-orange-400  text-white rounded-full">
+                  <Button asChild className="bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400  text-white rounded-full">
                     <Link href="/">
                       <ArrowLeft className="mr-2 h-5 w-5" />
                       Return to Home

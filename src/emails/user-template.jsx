@@ -307,11 +307,7 @@ export const userEmailTemplate = (data) => `
 <body>
     <div class="container">
         <!-- Header with logo -->
-        <div class="header-logo">
-            <div class="logo-box">
-                <p class="logo-text">International Conference on Gender Equality,<br>Women Empowerment & Entrepreneurship</p>
-            </div>
-        </div>
+       
 
         <!-- Main content container -->
         <div class="main-container gradient-border">
