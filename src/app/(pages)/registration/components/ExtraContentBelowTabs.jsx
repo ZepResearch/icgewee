@@ -13,6 +13,11 @@ import {
     Calendar,
     Info,
     ArrowRight,
+    BookOpen,
+    Brain,
+    TrendingUp,
+    Video,
+    Award,
   } from "lucide-react"
   import Link from "next/link"
 import { Button } from '@/components/ui/button'
@@ -123,7 +128,7 @@ function ExtraContentBelowTabs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-gray-700">No refund if cancelled 30 days or less before the event</span>
+                <span className="text-gray-700">No refund if cancelled 60 days or less before the event</span>
               </li>
             </ul>
 
@@ -148,62 +153,137 @@ function ExtraContentBelowTabs() {
 
   {/* Conference Benefits Section */}
   <section className="py-16 bg-gray-50">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">Registration Benefits</h2>
-        <div className="h-1 w-20 bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 mx-auto mb-8 rounded-full"></div>
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">Registration Benefits</h2>
+      <div className="h-1 w-20 bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 mx-auto mb-8 rounded-full"></div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
+        <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+
+        <div className="relative">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
+              <FileText className="h-6 w-6 text-gray-900" />
+            </div>
+          </div>
+
+          <h3 className="text-xl font-semibold text-black mb-3">Conference Materials</h3>
+          <p className="text-gray-700">
+            Access to all conference proceedings, papers, and presentation materials
+          </p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
-          <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+      <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
+        <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
 
-          <div className="relative">
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
-              <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
-                <FileText className="h-6 w-6 text-gray-900" />
-              </div>
+        <div className="relative">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
+              <Users className="h-6 w-6 text-gray-900" />
             </div>
-
-            <h3 className="text-xl font-semibold text-black mb-3">Conference Materials</h3>
-            <p className="text-gray-700">
-              Access to all conference proceedings, papers, and presentation materials
-            </p>
           </div>
+
+          <h3 className="text-xl font-semibold text-black mb-3">Networking Opportunities</h3>
+          <p className="text-gray-700">Connect with researchers and professionals from around the world</p>
         </div>
+      </div>
 
-        <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
-          <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+      <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
+        <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
 
-          <div className="relative">
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
-              <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
-                <Users className="h-6 w-6 text-gray-900" />
-              </div>
+        <div className="relative">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
+              <Sparkles className="h-6 w-6 text-gray-900" />
             </div>
-
-            <h3 className="text-xl font-semibold text-black mb-3">Networking Opportunities</h3>
-            <p className="text-gray-700">Connect with researchers and professionals from around the world</p>
           </div>
+
+          <h3 className="text-xl font-semibold text-black mb-3">Interactive Sessions</h3>
+          <p className="text-gray-700">Participate in workshops, panel discussions, and Q&A sessions</p>
         </div>
+      </div>
 
-        <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
-          <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+      <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
+        <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
 
-          <div className="relative">
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
-              <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
-                <Sparkles className="h-6 w-6 text-gray-900" />
-              </div>
+        <div className="relative">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
+              <TrendingUp className="h-6 w-6 text-gray-900" />
             </div>
-
-            <h3 className="text-xl font-semibold text-black mb-3">Interactive Sessions</h3>
-            <p className="text-gray-700">Participate in workshops, panel discussions, and Q&A sessions</p>
           </div>
+
+          <h3 className="text-xl font-semibold text-black mb-3">Career Development</h3>
+          <p className="text-gray-700">Learn and share new abilities, career prospects, and business concepts</p>
+        </div>
+      </div>
+
+      <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
+        <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+
+        <div className="relative">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
+              <BookOpen className="h-6 w-6 text-gray-900" />
+            </div>
+          </div>
+
+          <h3 className="text-xl font-semibold text-black mb-3">Publication Opportunities</h3>
+          <p className="text-gray-700">Publication in Scopus/WOS/Google Scholar Indexed journals</p>
+        </div>
+      </div>
+
+      <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
+        <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+
+        <div className="relative">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
+              <Brain className="h-6 w-6 text-gray-900" />
+            </div>
+          </div>
+
+          <h3 className="text-xl font-semibold text-black mb-3">Knowledge Exchange</h3>
+          <p className="text-gray-700">Gaining and exchanging knowledge with presenters, session chairs, speakers and other attendees</p>
+        </div>
+      </div>
+
+      <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
+        <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+
+        <div className="relative">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
+              <Video className="h-6 w-6 text-gray-900" />
+            </div>
+          </div>
+
+          <h3 className="text-xl font-semibold text-black mb-3">Video Documentation</h3>
+          <p className="text-gray-700">Videos of your talk and conference highlights will be posted on Facebook and YouTube for public viewing</p>
+        </div>
+      </div>
+
+      <div className="relative bg-white rounded-3xl border overflow-hidden p-6 shadow-sm group hover:shadow-md transition-all">
+        <div className="absolute -inset-px rounded-3xl bg-gray-100/20 opacity-0 group-hover:opacity-50 transition-opacity"></div>
+
+        <div className="relative">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 p-0.5 mb-4">
+            <div className="flex h-full w-full items-center justify-center rounded-lg bg-white">
+              <Award className="h-6 w-6 text-gray-900" />
+            </div>
+          </div>
+
+          <h3 className="text-xl font-semibold text-black mb-3">Digital Certificates</h3>
+          <p className="text-gray-700">Receive official participation and presentation certificates to enhance your professional profile</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   {/* CTA Section */}
   <section className="py-16 bg-gray-50">

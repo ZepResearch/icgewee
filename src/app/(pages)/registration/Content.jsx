@@ -313,120 +313,122 @@ export default function RegistrationPage() {
     const getCurrencySymbol = (currency) => currency === "USD" ? "$" : "₹"
     
     return (
-      <div key={`${categoryData.category}-${participantType}`} className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all">
-        <div className="bg-gradient-to-r from-gray-100 to-gray-200 p-6">
-          <div className="flex justify-between items-center mb-4">
-            <div className="flex items-center space-x-2">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/80 text-gray-900">
-                {categoryData.category}
-              </span>
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 text-white">
-                {participantType === "foreign" ? "International" : "Indian"}
-              </span>
-            </div>
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 p-0.5">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-white">
-                {presentationType === "physical" ? 
-                  <Presentation className="h-5 w-5 text-gray-900" /> :
-                  <Globe className="h-5 w-5 text-gray-900" />
-                }
-              </div>
-            </div>
-          </div>
-          
-          <div className="space-y-2">
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-800">Early Bird:</span>
-              <span className="text-lg font-bold text-black">
-                {getCurrencySymbol(categoryData.earlyBird.currency)}{categoryData.earlyBird.price}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-800">Regular:</span>
-              <span className="text-lg font-bold text-black">
-                {getCurrencySymbol(categoryData.regular.currency)}{categoryData.regular.price}
-              </span>
-            </div>
-            {categoryData.scopusQ3Q4 && (
-              <>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-800">Scopus Q3/Q4:</span>
-                  <span className="text-lg font-bold text-black">
-                    {getCurrencySymbol(categoryData.scopusQ3Q4.currency)}{categoryData.scopusQ3Q4.price}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-800">Scopus Q1/Q2:</span>
-                  <span className="text-lg font-bold text-black">
-                    {getCurrencySymbol(categoryData.scopusQ1Q2.currency)}{categoryData.scopusQ1Q2.price}
-                  </span>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-black mb-4">Features</h3>
-          <ul className="space-y-3 mb-6">
-            {categoryData.features.map((feature, i) => (
-              <li key={i} className="flex items-start">
-                <div className="h-5 w-5 rounded-full bg-gray-100 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
-                  <svg
-                    className="h-3 w-3 text-gray-900"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                </div>
-                <span className="text-gray-800 text-sm">{feature}</span>
-              </li>
-            ))}
-          </ul>
-
-          <div className="space-y-2">
-            <Button
-              onClick={() => handleTicketSelect(createTicketFromPricing(categoryData, "earlyBird", participantType, presentationType))}
-              className="w-full bg-neutral-700 text-md text-white rounded-full"
-            >
-              <CreditCard className="mr-2 h-4 w-4 text-white" />
-              Early Bird - {getCurrencySymbol(categoryData.earlyBird.currency)}{categoryData.earlyBird.price}
-            </Button>
-            <Button
-              onClick={() => handleTicketSelect(createTicketFromPricing(categoryData, "regular", participantType, presentationType))}
-              className="w-full bg-neutral-700 text-md text-white rounded-full"
-            >
-              <CreditCard className="mr-2 h-4 w-4 text-white" />
-              Regular - {getCurrencySymbol(categoryData.regular.currency)}{categoryData.regular.price}
-            </Button>
-            {categoryData.scopusQ3Q4 && (
-              <>
-                <Button
-                  onClick={() => handleTicketSelect(createTicketFromPricing(categoryData, "scopusQ3Q4", participantType, presentationType))}
-                  className="w-full bg-neutral-700 text-md text-white rounded-full"
-                >
-                  <Sparkles className="mr-2 h-4 w-4 text-white" />
-                  Scopus Q3/Q4 - {getCurrencySymbol(categoryData.scopusQ3Q4.currency)}{categoryData.scopusQ3Q4.price}
-                </Button>
-                <Button
-                  onClick={() => handleTicketSelect(createTicketFromPricing(categoryData, "scopusQ1Q2", participantType, presentationType))}
-                  className="w-full bg-neutral-700 text-md text-white rounded-full"
-                >
-                  <Sparkles className="mr-2 h-4 w-4 text-white" />
-                  Scopus Q1/Q2 - {getCurrencySymbol(categoryData.scopusQ1Q2.currency)}{categoryData.scopusQ1Q2.price}
-                </Button>
-              </>
-            )}
-          </div>
+    <div key={`${categoryData.category}-${participantType}`} className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col min-h-[600px]">
+  <div className="bg-gradient-to-r from-gray-100 to-gray-200 p-6">
+    <div className="flex justify-between items-center mb-4">
+      <div className="flex items-center space-x-2">
+        <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/80 text-gray-900">
+          {categoryData.category}
+        </span>
+        <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 text-white">
+          {participantType === "foreign" ? "International" : "Indian"}
+        </span>
+      </div>
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 p-0.5">
+        <div className="flex h-full w-full items-center justify-center rounded-full bg-white">
+          {presentationType === "physical" ? 
+            <Presentation className="h-5 w-5 text-gray-900" /> :
+            <Globe className="h-5 w-5 text-gray-900" />
+          }
         </div>
       </div>
+    </div>
+    
+    <div className="space-y-2">
+      <div className="flex justify-between items-center">
+        <span className="text-sm text-gray-800">Early Bird:</span>
+        <span className="text-lg font-bold text-black">
+          {getCurrencySymbol(categoryData.earlyBird.currency)}{categoryData.earlyBird.price}
+        </span>
+      </div>
+      <div className="flex justify-between items-center">
+        <span className="text-sm text-gray-800">Regular:</span>
+        <span className="text-lg font-bold text-black">
+          {getCurrencySymbol(categoryData.regular.currency)}{categoryData.regular.price}
+        </span>
+      </div>
+      {categoryData.scopusQ3Q4 && (
+        <>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-800">Scopus Q3/Q4:</span>
+            <span className="text-lg font-bold text-black">
+              {getCurrencySymbol(categoryData.scopusQ3Q4.currency)}{categoryData.scopusQ3Q4.price}
+            </span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-800">Scopus Q1/Q2:</span>
+            <span className="text-lg font-bold text-black">
+              {getCurrencySymbol(categoryData.scopusQ1Q2.currency)}{categoryData.scopusQ1Q2.price}
+            </span>
+          </div>
+        </>
+      )}
+    </div>
+  </div>
+
+  <div className="p-6 flex flex-col flex-1">
+    <div className="flex-1">
+      <h3 className="text-xl font-bold text-black mb-4">deliverables</h3>
+      <ul className="space-y-3 mb-6">
+        {categoryData.features.map((feature, i) => (
+          <li key={i} className="flex items-start">
+            <div className="h-5 w-5 rounded-full bg-gray-100 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
+              <svg
+                className="h-3 w-3 text-gray-900"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span className="text-gray-800 text-sm">{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div className="space-y-2 mt-auto">
+      <Button
+        onClick={() => handleTicketSelect(createTicketFromPricing(categoryData, "earlyBird", participantType, presentationType))}
+        className="w-full bg-neutral-700 text-md text-white rounded-full"
+      >
+        <CreditCard className="mr-2 h-4 w-4 text-white" />
+        Early Bird - {getCurrencySymbol(categoryData.earlyBird.currency)}{categoryData.earlyBird.price}
+      </Button>
+      <Button
+        onClick={() => handleTicketSelect(createTicketFromPricing(categoryData, "regular", participantType, presentationType))}
+        className="w-full bg-neutral-700 text-md text-white rounded-full"
+      >
+        <CreditCard className="mr-2 h-4 w-4 text-white" />
+        Regular - {getCurrencySymbol(categoryData.regular.currency)}{categoryData.regular.price}
+      </Button>
+      {categoryData.scopusQ3Q4 && (
+        <>
+          <Button
+            onClick={() => handleTicketSelect(createTicketFromPricing(categoryData, "scopusQ3Q4", participantType, presentationType))}
+            className="w-full bg-neutral-700 text-md text-white rounded-full"
+          >
+            <Sparkles className="mr-2 h-4 w-4 text-white" />
+            Scopus Q3/Q4 - {getCurrencySymbol(categoryData.scopusQ3Q4.currency)}{categoryData.scopusQ3Q4.price}
+          </Button>
+          <Button
+            onClick={() => handleTicketSelect(createTicketFromPricing(categoryData, "scopusQ1Q2", participantType, presentationType))}
+            className="w-full bg-neutral-700 text-md text-white rounded-full"
+          >
+            <Sparkles className="mr-2 h-4 w-4 text-white" />
+            Scopus Q1/Q2 - {getCurrencySymbol(categoryData.scopusQ1Q2.currency)}{categoryData.scopusQ1Q2.price}
+          </Button>
+        </>
+      )}
+    </div>
+  </div>
+</div>
     )
   }
 
