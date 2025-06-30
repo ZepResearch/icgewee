@@ -187,7 +187,7 @@ export default function VenuePage() {
                     <MapPin className="w-5 h-5 text-rose-500 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-600">Jl. Raya Nusa Dua Selatan, Benoa, Bali 80363, Indonesia</p>
+                      <p className="text-gray-600">Will declare Soon</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
