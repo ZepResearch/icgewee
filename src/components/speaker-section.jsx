@@ -43,6 +43,10 @@ const SpeakerCard = ({ speaker, onMoreInfo }) => {
         <div className="space-y-3">
           <h3 className="text-xl font-semibold text-gray-900 leading-tight">{speaker.name}</h3>
           <p className="text-gray-700 font-medium text-sm">{speaker.role}</p>
+           <div className="flex items-center gap-3 text-gray-500 text-sm bg-gray-50/80 rounded-lg p-3">
+                <GraduationCap className="h-4 w-4" />
+                <span>{speaker.college}</span>
+              </div>
           <div className="flex items-center gap-2 text-gray-500 text-sm">
             <MapPin className="h-4 w-4" />
             <span>{speaker.country}</span>
