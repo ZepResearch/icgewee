@@ -21,70 +21,11 @@ import {
   } from "lucide-react"
   import Link from "next/link"
 import { Button } from '@/components/ui/button'
+import Guidline from './guidline'
 function ExtraContentBelowTabs() {
   return (
-    <div> <section className="py-16 bg-white">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">Registration Process</h2>
-        <div className="h-1 w-20 bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 mx-auto mb-8 rounded-full"></div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-5xl mx-auto">
-        {/* Step 1 */}
-        <div className="relative">
-          <div className="bg-white rounded-xl border p-6 h-full flex flex-col items-center text-center">
-            <div className="h-16 w-16 rounded-full bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 flex items-center justify-center mb-4">
-              <Ticket className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold text-black mb-2">Select Ticket</h3>
-            <p className="text-gray-700">Choose the ticket type that suits your needs.</p>
-          </div>
-          <div className="hidden md:block absolute -right-9 top-1/2 transform -translate-y-1/2 z-10">
-            <ArrowRight className="h-8 w-8 text-gray-900" />
-          </div>
-        </div>
-
-        {/* Step 2 */}
-        <div className="relative">
-          <div className="bg-white rounded-xl border p-6 h-full flex flex-col items-center text-center">
-            <div className="h-16 w-16 rounded-full bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 flex items-center justify-center mb-4">
-              <CreditCard className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold text-black mb-2">Payment</h3>
-            <p className="text-gray-700">Securely pay for your selected ticket.</p>
-          </div>
-          <div className="hidden md:block absolute -right-9 top-1/2 transform -translate-y-1/2 z-10">
-            <ArrowRight className="h-8 w-8 text-gray-900" />
-          </div>
-        </div>
-
-        {/* Step 3 */}
-        <div className="relative">
-          <div className="bg-white rounded-xl border p-6 h-full flex flex-col items-center text-center">
-            <div className="h-16 w-16 rounded-full bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 flex items-center justify-center mb-4">
-              <Mail className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold text-black mb-2">Confirmation</h3>
-            <p className="text-gray-700">Receive a confirmation email with your ticket details.</p>
-          </div>
-          <div className="hidden md:block absolute -right-9 top-1/2 transform -translate-y-1/2 z-10">
-            <ArrowRight className="h-8 w-8 text-gray-900" />
-          </div>
-        </div>
-
-        {/* Step 4 */}
-        <div>
-          <div className="bg-white rounded-xl border p-6 h-full flex flex-col items-center text-center">
-            <div className="h-16 w-16 rounded-full bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 flex items-center justify-center mb-4">
-              <Calendar className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-xl font-bold text-black mb-2">Event Day</h3>
-            <p className="text-gray-700">Attend the event and enjoy your experience!</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div> <section className="py-4 bg-white">
+ <Guidline />
   </section>
   {/* Cancellation Policy Section */}
   <section className="py-16 bg-white">
@@ -114,14 +55,7 @@ function ExtraContentBelowTabs() {
                 </div>
                 <span className="text-gray-700">Full refund if cancelled 60+ days before the event</span>
               </li>
-              <li className="flex items-start">
-                <div className="h-5 w-5 rounded-full bg-gray-200 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
-                  <svg className="h-3 w-3 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-gray-700">50% refund if cancelled 30-59 days before the event</span>
-              </li>
+              
               <li className="flex items-start">
                 <div className="h-5 w-5 rounded-full bg-gray-200 flex items-center justify-center mt-0.5 mr-3 flex-shrink-0">
                   <svg className="h-3 w-3 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">

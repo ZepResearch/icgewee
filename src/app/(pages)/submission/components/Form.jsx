@@ -7,6 +7,7 @@ import "react-phone-number-input/style.css"
 import PhoneInput from "react-phone-number-input"
 import { FileText, Upload, ChevronDown, Send } from "lucide-react"
 import { GeometricShapesCSS } from "./geometric-shapes-css"
+import AbstractSubmissionGuidelines from "./SubmitGuidline"
 
 export default function PaperSubmissionPage() {
   const router = useRouter()
@@ -72,7 +73,7 @@ export default function PaperSubmissionPage() {
      
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center mb-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  mb-6">
               Paper
               <span className="relative inline-block mx-2 ml-6">
@@ -82,6 +83,8 @@ export default function PaperSubmissionPage() {
             <h2 className="text-xl  mb-8">
               Share your research at International Conference on Gender Equality, Women Empowerment & Entrepreneurship
             </h2>
+            <a href="#guid" className="scroll-smooth transition-all py-2 px-3 bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 rounded-4xl text-white font-semibold hover:drop-shadow-2xl hover:bg-orange-500/90">
+             Read Submission Guidelines before submitting </a>
           </div>
         </div>
       </section>
@@ -359,6 +362,9 @@ export default function PaperSubmissionPage() {
                 </form>
               </div>
             </div>
+          </div>
+          <div id="guid" className="mt-12 scroll-smooth ">
+          <AbstractSubmissionGuidelines />
           </div>
         </div>
       </section>

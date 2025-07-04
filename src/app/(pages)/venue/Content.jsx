@@ -89,10 +89,11 @@ export default function VenuePage() {
                 <div className="flex items-start space-x-3">
                 
                   <div className="text-right">
-                    <p className="text-xs text-gray-600 leading-relaxed">
-                      Located in the cultural heart of Bali, our venue offers unparalleled access to Indonesia's
-                      innovation ecosystem and world-class amenities in a tropical paradise setting...
-                    </p>
+<p className="text-xs text-gray-600 leading-relaxed">
+  Nestled in the heart of Kuta, Melasti Kuta Beach Hotel & Spa offers a vibrant blend of modern comfort and tropical serenity. Enjoy high-speed WiFi throughout the venue, state-of-the-art conference amenities, and delicious Balinese cuisine. After a productive day, relax in our luxury lounges or take in ocean views just steps away from your room.
+</p>
+
+
                   </div>
                 </div>
               </Card>
@@ -110,13 +111,12 @@ export default function VenuePage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 ">Conference Venue</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              The venue for the International Conference on Gender Equality, Women Empowerment & Entrepreneurship 2025 will be announced soon. We are carefully selecting a world-class location in Bali that will provide the perfect setting for this transformative event. Stay tuned for updates on our venue announcement.
-            </p>
+Melasti Kuta Beach Hotel & Spa will proudly host the International Conference on Gender Equality, Women Empowerment & Entrepreneurship 2025. Located in the heart of Kuta, Bali, the venue combines modern amenities, authentic Balinese charm, and beachfront serenity—offering the perfect setting for impactful conversations, global networking, and cultural immersion.            </p>
           </div>
 
           <div className="relative w-full h-[350px] mb-12 rounded-xl overflow-hidden shadow-2xl">
             <img 
-              src="https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+              src="/gallery/venue.jpg" 
               alt="Bali International Convention Centre"
               className="w-full h-full object-cover"
             />
@@ -130,20 +130,28 @@ export default function VenuePage() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Venue Specifications</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Main Auditorium Capacity</span>
-                  <span className="font-semibold text-gray-900">800 seats</span>
+                  <span className="text-gray-600"> Main Hall Capacity:</span>
+                  <span className="font-semibold text-gray-900">300 attendees  </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Exhibition Space</span>
-                  <span className="font-semibold text-gray-900">3,500 sqm</span>
+                  <span className="text-gray-600"> Breakout Rooms:</span>
+                  <span className="font-semibold text-gray-900">4 flexible meeting rooms  </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Breakout Rooms</span>
-                  <span className="font-semibold text-gray-900">8 rooms</span>
+                  <span className="text-gray-600">WiFi:</span>
+                  <span className="font-semibold text-gray-900">High-speed internet throughout the property</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Networking Areas</span>
-                  <span className="font-semibold text-gray-900">2 levels</span>
+                  <span className="text-gray-600"> Dining:</span>
+                  <span className="font-semibold text-gray-900">On-site Balinese and international cuisine</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600"> Accommodation:</span>
+                  <span className="font-semibold text-gray-900">Over 100 guest rooms and suites </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600"> Leisure:</span>
+                  <span className="font-semibold text-gray-900">Poolside lounges, spa facilities, and beach access </span>
                 </div>
               </div>
             </Card>
@@ -157,16 +165,25 @@ export default function VenuePage() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
-                  <span className="text-gray-700">Assistive listening systems available</span>
+                  <span className="text-gray-700">Ground-floor event spaces for easy access</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
-                  <span className="text-gray-700">Braille signage and tactile guidance</span>
+                  <span className="text-gray-700">Elevator access to all guestroom levels </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
-                  <span className="text-gray-700">Dedicated accessibility support staff</span>
+                  <span className="text-gray-700">Accessible restrooms in public areas </span>
                 </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
+                  <span className="text-gray-700">Staff available for on-site mobility assistance </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
+                  <span className="text-gray-700">Transport assistance available upon request</span>
+                </div>
+                
               </div>
             </Card>
           </div>
@@ -181,13 +198,13 @@ export default function VenuePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Bali International Convention Centre</h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Melasti Kuta Beach Hotel & Spa </h3>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <MapPin className="w-5 h-5 text-rose-500 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-600">Will declare Soon</p>
+                      <p className="text-gray-600">Jl. Kartika Plaza No.5, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -201,7 +218,7 @@ export default function VenuePage() {
                     <Car className="w-5 h-5 text-rose-500 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Transportation</p>
-                      <p className="text-gray-600">15 minutes from Ngurah Rai International Airport</p>
+                      <p className="text-gray-600">12-17 minutes from Ngurah Rai International Airport</p>
                     </div>
                   </div>
                 </div>
@@ -212,15 +229,15 @@ export default function VenuePage() {
                 <div className="space-y-3 text-sm">
                   <div>
                     <p className="font-semibold text-gray-900">From Ngurah Rai Airport</p>
-                    <p className="text-gray-600">15 minutes by taxi or airport shuttle service</p>
+                    <p className="text-gray-600">10 minutes by taxi or hotel airport transfer serviceBy Hotel Shuttle</p>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">By Hotel Shuttle</p>
-                    <p className="text-gray-600">Complimentary shuttle from major Nusa Dua hotels</p>
+                    <p className="text-gray-600">PaidComplimentary airport pickup available on request</p>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">By Car</p>
-                    <p className="text-gray-600">Ample parking available, valet service provided</p>
+                    <p className="text-gray-600">Ample parking available, valet services</p>
                   </div>
                 </div>
               </Card>
@@ -230,8 +247,7 @@ export default function VenuePage() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Interactive Map</h3>
               <div className="w-full h-96 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.2!2d115.2276!3d-8.8048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd244c13e8d09c3%3A0x24910fb2c622c3ac!2sBali%20International%20Convention%20Centre!5e0!3m2!1sen!2sid!4v1635123456789!5m2!1sen!2sid"
-                  width="100%"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31549.01608938447!2d115.1377004!3d-8.726922!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246a376b6c5bb%3A0xbc9328f54a331760!2sMelasti%20Kuta%20Beach%20Hotel%20%26%20Spa!5e0!3m2!1sen!2sin!4v1751621131304!5m2!1sen!2sin"                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
@@ -333,14 +349,14 @@ export default function VenuePage() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Join Us?</h2>
               <p className="text-xl mb-8 opacity-90">
-                Experience the power of gender equality and women empowerment in the tropical paradise of Bali. Our venue
+                Experience the power of gender equality and women empowerment in the Melasti Kuta Beach Hotel & Spa  of Bali. Our venue
                 offers the perfect backdrop for meaningful discussions, networking, and transformative learning experiences.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
                 <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4">
                   <MapPin className="w-8 h-8 mb-3" />
-                  <h3 className="font-semibold mb-2">Tropical Paradise</h3>
+                  <h3 className="font-semibold mb-2">Melasti Kuta Beach Hotel & Spa </h3>
                   <p className="text-sm opacity-90">Inspiring location in beautiful Bali, Indonesia</p>
                 </div>
                 <div className="bg-white/30 backdrop-blur-sm rounded-lg p-4">

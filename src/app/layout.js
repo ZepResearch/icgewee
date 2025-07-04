@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import ConferenceFooter from "@/components/Footer";
+import TawkToChat from "@/components/TawkToChat";
+import FloatingWhatsApp from "@/components/FloatingWhatsapp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +30,8 @@ export default function RootLayout({ children }) {
        <Nav/>
         {children}
       <ConferenceFooter/>
+      <TawkToChat/>
+      <FloatingWhatsApp/>
       </body>
     </html>
   );

@@ -98,7 +98,9 @@ export default function ConferenceVenue() {
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Address</p>
-                      <p className="text-gray-800">Bali, Indonesia [Detail address will declare soon]</p>
+                      <p className="text-gray-800 font-bold">Melasti Kuta Beach Hotel & Spa</p>
+                      <p className="text-gray-800">Jl. Kartika Plaza No.5, Kuta, Kec. Kuta, Kabupaten Badung, Bali 80361, Indonesia</p>
+
                     </div>
                   </div>
                 </div>
@@ -128,14 +130,16 @@ export default function ConferenceVenue() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <Link href="https://maps.app.goo.gl/koqWFRepp7oiffUq6" target="_blank" rel="noopener noreferrer">
                   <Button className="  bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     Get Directions
                     <Navigation className="mr-2 h-5 w-5" />
                   </Button>
+                  </Link>
                   <Link href="/venue">
                     <Button
-                      variant="outline"
-                     className="bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-lg text-lg "
+                     
+                     className="bg-neutral-900 hover:bg-neutral-800 text-white hover: px-8 py-4 rounded-lg text-lg "
                       >
                       Venue Details
                     </Button>
