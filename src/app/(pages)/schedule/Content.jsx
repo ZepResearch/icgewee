@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
 import { addDays } from "date-fns"
+import Link from "next/link"
 
 const scheduleData = [
   {
@@ -143,9 +144,11 @@ export default function ConferenceSchedule() {
 
           {/* Call to Action */}
           <div className="flex justify-center mt-8">
+            <Link href={'/registration'}>
             <button className="bg-gradient-to-tr from-sky-400 via-rose-400 to-lime-400 hover:opacity-90 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 flex items-center shadow-lg text-lg">
               Register Now
             </button>
+            </Link>
           </div>
         </div>
       </div>

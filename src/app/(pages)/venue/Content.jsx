@@ -247,7 +247,7 @@ Melasti Kuta Beach Hotel & Spa will proudly host the International Conference on
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Interactive Map</h3>
               <div className="w-full h-96 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31549.01608938447!2d115.1377004!3d-8.726922!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246a376b6c5bb%3A0xbc9328f54a331760!2sMelasti%20Kuta%20Beach%20Hotel%20%26%20Spa!5e0!3m2!1sen!2sin!4v1751621131304!5m2!1sen!2sin"                   width="100%"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31549.01608938447!2d115.1377004!3d-8.726922!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246a376b6c5bb%3A0xbc9328f54a331760!2sMelasti%20Kuta%20Beach%20Hotel%20%26%20Spa!5e0!3m2!1sen!2sin!4v1751621131304!5m2!1sen!2sin"                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
