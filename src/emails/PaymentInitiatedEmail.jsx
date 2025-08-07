@@ -204,11 +204,7 @@ const RegistrationEmailTemplate = (data) => {
       <body class="grid-pattern">
         <div class="container">
           <div class="header">
-            <div class="logo">
-              <div style="width: 180px; height: 60px; margin: 0 auto; background: linear-gradient(to top left, #38bdf8, #fb7185, #a3e635); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px;">
-                ICGEWE 2025
-              </div>
-            </div>
+            
             <div class="conference-title">
               International Conference on Gender Equality, Women Empowerment & Entrepreneurship
             </div>
