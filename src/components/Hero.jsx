@@ -24,26 +24,26 @@ export default function Hero() {
                 research across diverse fields.
               </p>
               
-            <div className="flex sm:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-4xl backdrop-blur-sm bg-gray-50/30 py-4 rounded-3xl ">
+            <div className="flex lg:flex-row flex-col-reverse items-start sm:items-center justify-start gap-3 px-4 max-w-4xl backdrop-blur-sm bg-gray-50/30 py-4 rounded-3xl ">
               <img
                 src="/assets/scopus.png"
                 alt=""
-                className="h-12 drop-shadow-lg"
+                className="h-16 drop-shadow-lg"
               />
               <img
                 src="/assets/clarivate.png"
                 alt=""
-                className="h-12 drop-shadow-lg"
+                className="h-16 drop-shadow-lg"
               />
               <img
                 src="assets/cpd.png"
                 alt=""
-                className="h-20 drop-shadow-lg"
+                className="h-32 drop-shadow-lg"
               /> 
               <img
                 src="assets/zepresearch.png"
                 alt=""
-                className="h-12 drop-shadow-lg"
+                className="h-16 drop-shadow-lg"
               />
             </div>
               <div className="gap-3 flex  sm:flex-row flex-col mb-0 ">
