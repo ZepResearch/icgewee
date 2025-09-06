@@ -98,10 +98,15 @@ export default  function ConferenceTimeline() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {timelineItems.map((item, index) => {
             const IconComponent = getIconForTitle(item.title)
+            const isExpired = index === 0 // First item is considered expired
+            
             return (
               <div key={item.id} className="group">
                 {/* Modern Card */}
-                <div className="relative   bg-white/70 drop-shadow-xl backdrop-blur-sm border border-gray-200/50 rounded-2xl hover:bg-white hover:border-transparent hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-500 overflow-hidden h-80">
+                <div className={cn(
+                  "relative bg-white/70 drop-shadow-xl backdrop-blur-sm border border-gray-200/50 rounded-2xl hover:bg-white hover:border-transparent hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-500 overflow-hidden h-80",
+                  isExpired && "opacity-75 saturate-50"
+                )}>
                   {/* Gradient border on hover */}
                   <div className="absolute inset-0 bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
                   <div className="absolute inset-[1px] bg-white rounded-[15px] group-hover:bg-white/95 transition-colors duration-500"></div>
@@ -110,23 +115,41 @@ export default  function ConferenceTimeline() {
                   <div className="relative p-8 h-full flex flex-col">
                     {/* Icon */}
                     <div className="mb-8">
-                      <div className="w-14 h-14 bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 rounded-xl flex items-center justify-center shadow-lg shadow-gray-200/50 group-hover:shadow-xl group-hover:shadow-gray-300/30 transition-all duration-300">
+                      <div className={cn(
+                        "w-14 h-14 bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 rounded-xl flex items-center justify-center shadow-lg shadow-gray-200/50 group-hover:shadow-xl group-hover:shadow-gray-300/30 transition-all duration-300",
+                        isExpired && "grayscale opacity-60"
+                      )}>
                         <IconComponent className="w-7 h-7 text-white" />
                       </div>
                     </div>
 
                     {/* Content */}
-                    <div className="flex-grow  space-y-20 ">
+                    <div className="flex-grow space-y-20">
                       {/* Title */}
-                      <h3 className="text-lg font-semibold text-gray-900 leading-snug tracking-tight">
+                      <h3 className={cn(
+                        "text-lg font-semibold text-gray-900 leading-snug tracking-tight",
+                        isExpired && "line-through text-gray-500"
+                      )}>
                         {item.title}
                       </h3>
 
                       {/* Date */}
-                      <div className="inline-flex items-center px-3 py-1.5 bg-neutral-900 rounded-lg">
+                      <div className={cn(
+                        "inline-flex items-center px-3 py-1.5 bg-neutral-900 rounded-lg",
+                        isExpired && "bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400 "
+                      )}>
                         <p className="text-white font-medium text-md">{item.date}</p>
                       </div>
                     </div>
+
+                    {/* Expired badge */}
+                    {isExpired && (
+                      <div className="absolute top-4 right-4">
+                        <div className="px-2 py-1 bg-gradient-to-tl from-sky-400 via-rose-400 to-lime-400  text-white text-xs font-medium rounded-full">
+                          EXPIRED
+                        </div>
+                      </div>
+                    )}
 
                     {/* Decorative element */}
                     <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-sky-400/5 via-rose-400/5 to-lime-400/5 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
