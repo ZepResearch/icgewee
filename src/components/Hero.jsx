@@ -35,11 +35,11 @@ export default function Hero() {
                 alt=""
                 className="h-16 drop-shadow-lg"
               />
-              <img
+              {/* <img
                 src="assets/cpd.png"
                 alt=""
                 className="h-32 drop-shadow-lg"
-              /> 
+              />  */}
               <img
                 src="assets/zepresearch.png"
                 alt=""
